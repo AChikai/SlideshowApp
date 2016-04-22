@@ -57,14 +57,28 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+        photo1.userInteractionEnabled = true
+        photo2.userInteractionEnabled = true
+        photo3.userInteractionEnabled = true
         
-        let tapGesture:UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapped(_:)))
+        let tapGesture:UIGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapped:")
         //シングルタップ
         
         tapGesture.delegate = self;
         //デリゲートをセット
+        let tapGesture2:UIGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapped:")
+        //タップジェスチャー２
         
-        self.view.addGestureRecognizer(tapGesture)
+        tapGesture2.delegate = self;
+        let tapGesture3:UIGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapped:")
+        //タップジェスチャー３
+        
+        tapGesture3.delegate = self;
+        
+        self.photo1.addGestureRecognizer(tapGesture)
+        self.photo2.addGestureRecognizer(tapGesture2)
+        self.photo3.addGestureRecognizer(tapGesture3)
         //Viewに追加
         
     }
@@ -72,12 +86,12 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     func tapped(sender: UITapGestureRecognizer) {
         //タップイベント
         
-        performSegueWithIdentifier("toResultViewController", sender: nil)
-        //ResultViewControllerへ遷移するために Segue を呼び出す
-    }
-    
+        performSegueWithIdentifier("toResultViewController2", sender: nil)
+        //ResultViewControllerへ遷移するために Segue を呼び出
+     }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "toResultViewController") {
+        if (segue.identifier == "toResultViewController2") {
             let resultViewController: ResultViewController = (segue.destinationViewController as! ResultViewController)
             var toImageView: UIImageView = photo1
             if imageNo == 0 {
