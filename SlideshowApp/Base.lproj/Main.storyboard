@@ -18,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-XL-JB8">
-                                <rect key="frame" x="0.0" y="208" width="375" height="252"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-XL-JB8">
+                                <rect key="frame" x="-4" y="208" width="383" height="252"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oKh-cR-oRh">
-                                <rect key="frame" x="0.0" y="208" width="375" height="252"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oKh-cR-oRh">
+                                <rect key="frame" x="-4" y="208" width="383" height="252"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iau-FP-pgE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iau-FP-pgE">
                                 <rect key="frame" x="164" y="617" width="47" height="30"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
@@ -42,26 +42,29 @@
                                     <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O1h-v1-umC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xv-r3-MHK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xv-r3-MHK">
                                 <rect key="frame" x="29" y="617" width="46" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fj0-fO-rwv"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cav-67-fEd">
-                                <rect key="frame" x="0.0" y="208" width="375" height="252"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cav-67-fEd">
+                                <rect key="frame" x="-4" y="208" width="383" height="252"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rHD-XL-JB8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0gO-9J-xFi"/>
                             <constraint firstItem="cav-67-fEd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="66w-KI-Abl"/>
+                            <constraint firstItem="oKh-cR-oRh" firstAttribute="bottom" secondItem="cav-67-fEd" secondAttribute="bottom" id="7DY-2J-2sU"/>
+                            <constraint firstItem="oKh-cR-oRh" firstAttribute="bottom" secondItem="rHD-XL-JB8" secondAttribute="bottom" id="9Cx-VQ-bcC"/>
                             <constraint firstItem="iau-FP-pgE" firstAttribute="leading" secondItem="9Xv-r3-MHK" secondAttribute="trailing" constant="89" id="Gh3-OU-Ybp"/>
                             <constraint firstItem="oKh-cR-oRh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="188" id="IYy-Mh-Nwj"/>
                             <constraint firstItem="oKh-cR-oRh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="QoB-QC-ejL"/>
                             <constraint firstItem="cav-67-fEd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="188" id="UW6-Ty-TRW"/>
                             <constraint firstItem="Rlj-TE-RU1" firstAttribute="leading" secondItem="iau-FP-pgE" secondAttribute="trailing" constant="91" id="Zb9-n0-U9e"/>
+                            <constraint firstItem="oKh-cR-oRh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aAz-ff-zqQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rlj-TE-RU1" secondAttribute="trailing" constant="12" id="afa-F5-Egh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rHD-XL-JB8" secondAttribute="trailing" constant="-20" id="c1M-8A-b2B"/>
                             <constraint firstItem="9Xv-r3-MHK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="hFY-hC-jpa"/>
@@ -71,6 +74,7 @@
                             <constraint firstItem="rHD-XL-JB8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="188" id="qId-it-dSe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oKh-cR-oRh" secondAttribute="trailing" constant="-20" id="sa0-0v-w1o"/>
                             <constraint firstAttribute="bottom" secondItem="9Xv-r3-MHK" secondAttribute="bottom" constant="20" symbolic="YES" id="vQG-yy-fxT"/>
+                            <constraint firstItem="oKh-cR-oRh" firstAttribute="centerX" secondItem="iau-FP-pgE" secondAttribute="centerX" id="ztp-jB-8Nf"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
